@@ -142,13 +142,13 @@ export default function Cards(props) {
                mb: 1,
             }}
          >
-            <Link to={`/movie/${props.data.id}`} className={classes.link}>
+            <Link to={`/movie/${props.data.id}`} className={classes.link} >
                <MyButton size="small" variant="contained" color="secondary">
-                  <PlayArrowOutlinedIcon /> Play Now
+                  <PlayArrowOutlinedIcon /> Show More
                </MyButton>
             </Link>
 
-            <Link to={`/movie/${props.data.id}`} className={classes.phoneLink}>
+            <Link to={`/movie/${props.data.id}`} className={classes.phoneLink} >
                <MyPhoneButton size="small" variant="contained" color="secondary">
                   <PlayArrowOutlinedIcon />
                </MyPhoneButton>

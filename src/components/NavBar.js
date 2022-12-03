@@ -90,7 +90,7 @@ export default function NavBar() {
          >
             <Toolbar className={classes.root}>
             <Link to="/">
-               <img src={logo} alt="CineMax Logo" className={classes.navLogo} />
+               {/* <img src={logo} alt="CineMax Logo" className={classes.navLogo} /> */}
             </Link>
             <SearchBar/>
             

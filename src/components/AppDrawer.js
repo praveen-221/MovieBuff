@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
    Drawer,
    FormControl,
@@ -10,6 +10,7 @@ import {
    ListItemText,
    Link,
    Divider,
+   FormHelperText,
 } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import CloseIcon from '@mui/icons-material/Close';
@@ -19,6 +20,7 @@ import theme from '../theme.js';
 
 import { ReactComponent as AppStoreIcon } from '../assets/app-store-badge.svg';
 import { ReactComponent as PlayStoreIcon } from '../assets/google-play-badge.svg';
+import axios from 'axios';
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -31,6 +33,25 @@ const style = {
 /////////////////////////////////////////////////////////////////////////////////////
 
 export default function AppDrawer(props) {
+   const [mail, setMail] = useState("");
+   const [pass, setPass] = useState("");
+
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      axios.post('/login',{
+         email: mail,
+         password: pass
+      })
+      .then(function(response){
+         console.log(response);
+      })
+      .catch(function(err){
+         console.log(err);
+      })
+      setMail("");
+      setPass("");
+   }
+
    return (
       <>
          <Drawer elevation={8} anchor="right" open={props.isDrawer}>
@@ -65,20 +86,24 @@ export default function AppDrawer(props) {
                      justifyContent: 'center',
                   }}
                >
-                  <FormControl sx={{ minWidth: '25vw' }}>
+                  <FormControl sx={{ minWidth: '25vw' }} onSubmit={handleSubmit}>
                      <TextField
-                        sx={{ mb: 2 }}
                         color="primary"
                         variant="filled"
                         type="email"
                         label="Email"
+                        value={mail}
+                        onChange={e => setMail(e.target.value)}
                         required
                      />
+                     <FormHelperText sx={{ mb: 2 }} id="my-helper-text">We'll never share your email.</FormHelperText>
 
                      <TextField
                         variant="filled"
                         type="password"
                         label="Pasword"
+                        value={pass}
+                        onChange={e=>setPass(e.target.value)}
                         required
                      />
                   </FormControl>
@@ -97,9 +122,9 @@ export default function AppDrawer(props) {
                      Forgot Password?
                   </Link>
 
-                  <Link href="#" variant="body1" underline="hover">
+                  {/* <Link href="#" variant="body1" underline="hover">
                      Login with OTP
-                  </Link>
+                  </Link> */}
                </ListItem>
 
                <ListItem>
@@ -130,7 +155,7 @@ export default function AppDrawer(props) {
                      mb: '1.5rem',
                   }}
                >
-                  <DrawerButton
+                  {/* <DrawerButton
                      style={{
                         backgroundColor: '#3F5297',
                         width: '100%',
@@ -150,7 +175,7 @@ export default function AppDrawer(props) {
                      }}
                   >
                      <i class="fab fa-google-plus-g"></i>
-                  </DrawerButton>
+                  </DrawerButton> */}
                </ListItem>
 
                <Divider />
@@ -166,8 +191,8 @@ export default function AppDrawer(props) {
                   <Divider />
                </List>
                <ListItem>
-                  <AppStoreIcon style={{ marginRight: '4px' }} />
-                  <PlayStoreIcon />
+                  {/* <AppStoreIcon style={{ marginRight: '4px' }} /> */}
+                  {/* <PlayStoreIcon /> */}
                </ListItem>
             </List>
          </Drawer>

@@ -33,25 +33,25 @@ export default function MainFooter() {
                ],
             },
             {
-               title: '"CINEMAX"',
+               title: '"MOVIEWORLD"',
                style: {
                   textAlign: 'center',
                },
                items: [
                   {
-                     title: 'Cinemax is the movie database website',
+                     title: 'MovieWorld is an online movie management website',
                   },
-                  {
-                     title: 'Designed and implemented by aspiring Full Stack Web Developer.',
-                  },
+                  // {
+                  //    title: 'Designed and implemented by aspiring Full Stack Web Developer.',
+                  // },
                   
                   {
-                     title: 'Computer Society of Anna University (CSAU)',
+                     title: 'Search, know & Review your Favorite Movie',
                   },
                   {
-                     title: `Velmurugan Jeyakumar`,
+                     title: `MovieWorld`,
                      icon: <CopyrightOutlinedIcon />,
-                     url: 'https://www.github.com/Velogan-Boy',
+                     url: 'https://github.com/praveen-221/MovieBuff',
                      openExternal: true,
                   },
                ],
@@ -62,7 +62,7 @@ export default function MainFooter() {
                   {
                      icon: <GitHubIcon />,
                      title: 'Github',
-                     url: 'https://www.github.com/Velogan-Boy',
+                     url: 'https://github.com/praveen-221/',
                      openExternal: true,
                      style: {
                         fontSize: '1rem',
@@ -71,7 +71,7 @@ export default function MainFooter() {
                   {
                      icon: <LinkedInIcon />,
                      title: 'LinkedIn',
-                     url: 'https://www.linkedin.com/in/velmurugan-jeyakumar/',
+                     url: 'https://www.linkedin.com/',
                      openExternal: true,
                      style: {
                         fontSize: '1rem',
@@ -80,7 +80,7 @@ export default function MainFooter() {
                   {
                      icon: <InstagramIcon />,
                      title: 'Instagram',
-                     url: 'https://www.instagram.com/velogan_boy/',
+                     url: 'https://www.instagram.com/',
                      openExternal: true,
                      style: {
                         fontSize: '1rem',
@@ -89,7 +89,7 @@ export default function MainFooter() {
                ],
             },
          ]}
-         bottom="Made with ❤️ by Velan"
+         bottom="Made with ❤️ by MovieBuffs"
       />
    );
 }

@@ -131,7 +131,7 @@ export default function Home() {
                   </span>
                   <span className={classes.sub2}> A Better place</span>
                   <ExploreButton variant="contained" color="secondary">
-                     {'Explore now > '}
+                     {'Login > '}
                   </ExploreButton>
                </h1>
             </Box>

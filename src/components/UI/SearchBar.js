@@ -81,7 +81,8 @@ export default function SearchBar() {
             <SearchIconWrapper>
                <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase placeholder="Search for movies powered by OMDB" onChange={renderList} onBlur={() => setAutocomplete(false)} />
+            <StyledInputBase placeholder="Search for movie" onChange={renderList} onBlur={() => setAutocomplete(false)} />
+            {/* {Search for movies powered by TMDB} */}
             <List
                elevation={28}
                sx={{

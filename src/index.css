@@ -7,3 +7,5 @@
 a:hover {
    color: #fbb231 !important;
 }
+
+/* <Route exact path="/movie/:id" children={<Movie />} /> */
