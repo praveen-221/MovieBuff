@@ -1,3 +1,3 @@
-# MOVIE TICKET MANAGEMENT SYSTEM
+# IMDB clone
 
-### MovieBuff is a online movie ticket management system as part of the CS6110 OOAD
+#### MovieBuff is a online movie management system where you can search movies, see details of individual movie. It is functioning using OMDB API
